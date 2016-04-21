@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.myappnew.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:src="@mipmap/a5a"
+        />
+    <LinearLayout
+        android:id="@+id/name_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/img"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="48dp"
+        android:maxLength="30"
+        android:typeface="sans"
+        android:singleLine="true"
+        android:hint="请输入用户名"
+        />
+    <ImageView
+        android:id="@+id/username_delete_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@mipmap/delete_login"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/name_ll"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="48dp"
+        android:hint="请输入密码"
+        android:maxLength="30"
+        android:typeface="sans"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        />
+
+        <ImageView
+            android:id="@+id/passwd_delete_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@mipmap/delete_login"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/forget_password"
+        android:layout_below="@id/password_ll"
+        android:background="@null"
+        android:text="忘记密码？"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        />
+    <Button
+        android:id="@+id/user_login"
+        android:onClick="login"
+        android:layout_below="@id/forget_password"
+        android:background="@drawable/button_background"
+        android:text="登录"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:textColor="@color/textLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/user_login"
+        android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/agree"
+        android:layout_below="@id/user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="同意"
+        android:checked="true"
+        />
+    <Button
+        android:id="@+id/duty"
+        android:paddingLeft="16dp"
+        android:paddingRight="56dp"
+        android:background="@null"
+        android:text="《登录协议》"
+        android:textColor="@color/argee"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:gravity="left|center"
+            android:paddingLeft="56dp"
+            android:text="新用户！"
+            android:id="@+id/register" />
+
+    </LinearLayout>
+
+</RelativeLayout>
